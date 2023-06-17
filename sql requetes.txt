@@ -1,0 +1,71 @@
+CREATE DATABASE IF NOT EXISTS bibliotheque;
+
+USE bibliotheque;
+
+CREATE TABLE IF NOT EXISTS `bibliothequaire` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `adresse` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `exemplaire` (
+  `NumExemplaire` int NOT NULL AUTO_INCREMENT,
+  `NumLivre` int NOT NULL,
+  `Etat` varchar(50) NOT NULL,
+  PRIMARY KEY (`NumExemplaire`),
+  KEY `NumLivre` (`NumLivre`),
+  FOREIGN KEY (`NumLivre`) REFERENCES `livre`(`NumLivre`) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS `livre` (
+  `NumLivre` int NOT NULL,
+  `Titre` varchar(255) NOT NULL,
+  `Auteurs` varchar(255) NOT NULL,
+  `MaisonEdition` varchar(255) NOT NULL,
+  `NbPages` int NOT NULL,
+  `NbExemplaires` int NOT NULL,
+  PRIMARY KEY (`NumLivre`)
+);
+
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `adresse` varchar(50) NOT NULL,
+  `statut` enum('Enseignant','Etudiant') NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+);
+
+
+CREATE TABLE IF NOT EXISTS `emprunt` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_utilisateur` int NOT NULL,
+  `NumLivre` int NOT NULL,
+  `date_emprunt` date NOT NULL,
+  `date_retour` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_utilisateur` (`id_utilisateur`),
+  KEY `NumLivre` (`NumLivre`),
+  FOREIGN KEY (`id_utilisateur`) REFERENCES `utilisateur`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`NumLivre`) REFERENCES `livre`(`NumLivre`) ON DELETE CASCADE
+);
+
+
+INSERT INTO `bibliothequaire` (`id`, `nom`, `prenom`, `adresse`, `email`, `password`) VALUES
+(1, 'admin', 'admin', 'ensaAgdir', 'admin@gmail.com', 'adminensa');
+
+
+INSERT INTO `livre` (`NumLivre`, `Titre`, `Auteurs`, `MaisonEdition`, `NbPages`, `NbExemplaires`) VALUES
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Scribner', 180, 0),
+(2, 'To Kill a Mockingbird', 'Harper Lee', 'J. B. Lippincott & Co.', 281, 5),
+(3, '1984', 'George Orwell', 'Secker & Warburg', 328, 2);
+
+
