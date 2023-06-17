@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="idStyle.css" />
+    <title>ENSAA Biblio</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="form signUp">
+        <h1>Welcome to ENSAA Biblio</h1>
+        <form method="post" action="signup.php">
+          <div class="error-text close">this is an error text area</div>
+          <div class="name-details">
+            <div class="field">
+              <label>First Name</label>
+              <input
+                type="text"
+                placeholder="First Name"
+                class="first-name"
+                name="first-name"
+              />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="last-name"
+                name="last-name"
+              />
+            </div>
+          </div>
+          <div class="field address-text">
+            <label>Address</label>
+            <input type="text" placeholder="Enter your address" name="address"/>
+          </div>
+          <div class="field statut">
+            <label>Statut</label>
+            <select name="statut">
+              <option value="Enseignant">Enseignant</option>
+              <option value="Etudiant">Etudiant</option>
+            </select>
+          </div>
+          <div class="field email-text">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your address" name="email" />
+          </div>
+          <div class="field button">
+            <input
+              type="submit"
+              value="SignUp"
+              class="SignUp-btn"
+              onclick="checkInputsingUp(event)"
+            />
+          </div>
+          <div class="link">
+            admin login ? <a href="login.html">Login now</a>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="checkId.js"></script>
+  </body>
+</html>

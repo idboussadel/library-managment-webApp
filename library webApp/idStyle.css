@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.form {
+  background-color: #fff;
+  padding: 1.3rem 1.5rem;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 125px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form .error-text {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  margin-top: 1.1rem;
+}
+.signUp .name-details {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.form input,.form select {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.signUp .field-image input {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.form .button input {
+  border: none;
+  font-size: 17px;
+  height: 48px;
+  font-weight: 500;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.form .button input:hover {
+  background-color: #535353;
+}
+
+.form .link {
+  text-align: center;
+  font-size: 17px;
+}
+.form .link a {
+  color: #333;
+  transition: 0.4s;
+  margin-left: 6px;
+}
+
+.login .email-input {
+  margin-top: 0.8rem;
+}
+.signUp .eye-passwd{
+    position: absolute;
+    color: #515151;
+    cursor: pointer;
+    transform: translate(25rem,2.25rem);
+}
+
+.close{
+    display: none;
+}
+.login .eye-passwd{
+    position: absolute;
+    color: #515151;
+    cursor: pointer;
+    transform: translate(23rem,2.25rem);
+}
+
+.wrapper-login{
+  width: 28rem;
+}
+.success{
+  color: #155724 !important;
+  background-color: #d4edda !important;
+  border: 1px solid #c3e6cb !important;
+}

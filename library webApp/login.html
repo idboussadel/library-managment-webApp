@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="idStyle.css" />
+    <title>ENSAA Biblio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-37oztoUfMieQYrHBl+Cn6DBhA6U5J6K5Bf8yvSe9bRkrXC+fBShE+JWmZv/FQ2K+jJlq3EKb/QKZXoO+2XRU1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper-login">
+      <section class="form login">
+        <h1>Welcome to ENSAA Biblio</h1>
+        <form method="post" action="login.php">
+        <div class="error-text close">this is an error text area</div>
+        <div class="field email-input">
+          <label>Email Address</label>
+          <input type="email" placeholder="exemple@gmail.com" name="email"/>
+        </div>
+        <div class="field passwd-input">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" name="password"/>
+          <ion-icon
+          name="eye-outline"
+          class="eye-passwd"
+          onclick="eyetoggle()"
+        ></ion-icon>
+        <ion-icon
+          name="eye-off"
+          class="eye-passwd close"
+          onclick="eyetoggle()"
+        ></ion-icon>
+        </div>
+        <div class="field button">
+          <input type="submit" value="login" class="login-btn" onclick="checkInputlogin(event)" />
+        </div>
+        <div class="link">
+          Not yet Signed up ? <a href="signup.html">Signup now</a>
+        </div>
+      </form>
+      </section>
+    </div>
+    <script src="checkId.js"></script>
+  </body>
+</html>

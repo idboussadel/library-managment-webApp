@@ -1,0 +1,68 @@
+header {
+    background-color: #272b30;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav li a:hover {
+    background-color: white;
+    color: #336699;
+  }
+  
+  /* Styles pour le formulaire d'insertion */
+  fieldset {
+    border: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+  }
+  
+  legend {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #32363a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles pour la réponse de PHP */
+  .message {
+    padding: 10px;
+    margin: 20px 0;
+    font-weight: bold;
+  }

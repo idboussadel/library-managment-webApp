@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion Emprunts</title>
+    <link rel="stylesheet" type="text/css" href="empruntstyle.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="topp">la gestion des emprunts</h1>
+      <nav>
+        <ul>
+                  <li><a href="dashboardAdmin.html">la page d'accueil</a></li>
+          <li><a href="dashboardAdmin.html">la page precedente</a></li>
+                  <li><a href="affichage.php">la liste des livres</a></li>                
+                  <li><a href="afficherusagers.php">la liste des utilisateurs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="empruntsphp.php" method="POST">
+        <div class="wrapper">
+          <div class="emprunts-inputs">
+            <div class="input-cards">
+                <div class="card">
+              <label>ID utilisateur:</label>
+              <input
+                type="text"
+                id="id_utilisateur"
+                name="id_utilisateur"
+              /></div>
+              <div class="card">
+              <label>NumLivre:</label>
+              <input type="text" id="NumLivre" name="NumLivre" />
+            </div>
+            <div class="card">
+                <label>Date d'emprunt:</label>
+                <input type="date" id="date_emprunt" name="date_emprunt" />
+              </div>
+            </div>
+            <div class="input-cards">
+              <div class="card">
+              <label>Date de retour:</label>
+              <input type="date" id="date_emprunt" name="date_retour" />
+            </div>
+            <div class="card">
+                <label>ID de l'emprunt:</label>
+                <input type="text" id="id_emprunt" name="id_emprunt" />
+            </div>
+            </div>
+          </div>
+          <div class="emprunts-btns">
+            <input
+              type="submit"
+              name="submit_emprunt"
+              value="Faire un emprunt"
+            />
+            <input type="submit" name="submit_rendre" value="Rendre un livre" />
+            <input
+              type="submit"
+              name="submit_consulter_en_cours"
+              value="Consulter les emprunts en cours"
+            />
+            <input
+              type="submit"
+              name="submit_consulter_historique"
+              value="Consulter l'historique des emprunts"
+            />
+          </div>
+          <div id="response-container"></div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

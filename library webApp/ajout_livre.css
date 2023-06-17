@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Style du header */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #aaa;
+}
+
+/* Style du formulaire */
+
+main {
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr {
+    margin-bottom: 10px;
+}
+
+table td:first-child {
+    width: 150px;
+    font-weight: bold;
+}
+
+table input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+table input:focus {
+    border-color: #aaa;
+}
+
+table input[type="submit"],
+table input[type="reset"] {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+table input[type="submit"]:hover,
+table input[type="reset"]:hover {
+    background-color: #aaa;
+}
+
+/* Style de la réponse */
+
+.response {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+}

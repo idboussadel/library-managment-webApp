@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body{
+    background-color: #f7f7f7;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0.3rem;
+    background-color: #fff;
+    width: 35rem;
+    margin-top: 2rem;
+    height: 12rem;
+    border-radius: 15px;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.132);
+    transition: 0.4s;
+}
+header:hover{
+    transform: translateY(-0.7rem);
+}
+img{
+    width: 10rem;
+    height: 9.5rem;
+}
+header p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+main h1{
+    margin-top: 2.6rem;
+    text-align: center;
+    border-bottom: 1px solid #66666643;
+}
+
+main ion-icon{
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: #0b7285;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.main-icons{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.card {
+    display: flex;
+    width: 19rem;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    border-radius: 25px;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.132);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.card:hover{
+    transform: translateY(-1rem);
+}
+
+.card p{
+    font-size: 1.4rem;
+    margin-top: 12px;
+    color: #333;
+}
+
+.main-icons a{
+    text-decoration: none;
+}
